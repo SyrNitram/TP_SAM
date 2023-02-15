@@ -109,8 +109,14 @@
     (path "/37f110a6-be92-4150-951b-75b7edf8d927/4b34f0b2-71f5-4ba1-809c-973e75924bfa"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
+    (path "/66093701-71a9-4c01-8a6a-9f966f9bb426/4b3c3c57-2442-4eee-951a-05d260cc48b6"
+      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+    )
     (path "/37f110a6-be92-4150-951b-75b7edf8d927/570bbb7d-eb87-49f9-945b-54747379fd5f"
       (reference "#PWR?") (unit 1) (value "+3.3VA") (footprint "")
+    )
+    (path "/66093701-71a9-4c01-8a6a-9f966f9bb426/5d91b4c1-b879-4328-a91f-755be60c531c"
+      (reference "#PWR?") (unit 1) (value "+3.3V") (footprint "")
     )
     (path "/37f110a6-be92-4150-951b-75b7edf8d927/67ce83ef-0e93-4c4d-998b-46f7cbbb313d"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
@@ -159,6 +165,9 @@
     )
     (path "/37f110a6-be92-4150-951b-75b7edf8d927/f35d1776-4682-4c83-b133-dc0e5f23c0cd"
       (reference "D?") (unit 1) (value "DIODE") (footprint "")
+    )
+    (path "/66093701-71a9-4c01-8a6a-9f966f9bb426/1e9b4040-47d8-42c8-ba63-a025e0b4da5f"
+      (reference "J?") (unit 1) (value "Conn_02x07_Odd_Even") (footprint "")
     )
     (path "/37f110a6-be92-4150-951b-75b7edf8d927/ff0f4203-5b43-4bcb-a047-667fa8a2096f"
       (reference "L?") (unit 1) (value "39n") (footprint "")
