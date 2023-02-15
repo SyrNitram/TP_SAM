@@ -240,9 +240,16 @@
     )
   )
 
+
   (junction (at 132.08 97.79) (diameter 0) (color 0 0 0 0)
     (uuid bfd39225-92e8-4945-92cb-0ffde953d510)
   )
+
+  (no_connect (at 135.89 100.33) (uuid 51386f75-bca7-4f8e-a439-f6864ed13481))
+  (no_connect (at 148.59 100.33) (uuid 53286bfb-08f0-48ed-9c5d-f8d4be5099d4))
+  (no_connect (at 135.89 90.17) (uuid af790c1c-1121-4d5e-b9a4-cc83498aab4b))
+  (no_connect (at 148.59 90.17) (uuid ee897e08-fd66-40ac-9674-9d47cecef0ff))
+  (no_connect (at 148.59 97.79) (uuid f43212cd-c590-40ff-aee7-e40253b936aa))
 
   (wire (pts (xy 124.46 92.71) (xy 135.89 92.71))
     (stroke (width 0) (type default) (color 0 0 0 0))
@@ -336,7 +343,7 @@
   (symbol (lib_id "Connector_Generic:Conn_02x07_Odd_Even") (at 140.97 97.79 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 1e9b4040-47d8-42c8-ba63-a025e0b4da5f)
-    (property "Reference" "J?" (id 0) (at 142.24 83.82 0))
+    (property "Reference" "J4" (id 0) (at 142.24 83.82 0))
     (property "Value" "Conn_02x07_Odd_Even" (id 1) (at 142.24 86.36 0))
     (property "Footprint" "" (id 2) (at 140.97 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -363,7 +370,7 @@
   (symbol (lib_id "power:GND") (at 124.46 97.79 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 4b3c3c57-2442-4eee-951a-05d260cc48b6)
-    (property "Reference" "#PWR?" (id 0) (at 124.46 104.14 0)
+    (property "Reference" "#PWR024" (id 0) (at 124.46 104.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 124.46 102.87 0))
@@ -379,7 +386,7 @@
   (symbol (lib_id "power:+3.3V") (at 124.46 88.9 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 5d91b4c1-b879-4328-a91f-755be60c531c)
-    (property "Reference" "#PWR?" (id 0) (at 124.46 92.71 0)
+    (property "Reference" "#PWR023" (id 0) (at 124.46 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (id 1) (at 124.46 83.82 0))
