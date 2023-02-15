@@ -18,7 +18,7 @@
  3. Soudure, test...
  4. Écriture du firmware
 
-#Questions 
+# Questions 
 Q13 : PB9 est tirée à la masse par la resistance de 100k car ce pin coeespond à BOOT0.
 Lorsque ce pin est à 0 le boot s'effectue depuis la memoire flash si le bit de config nBOOT_SEL est à 0.
 
