@@ -106,6 +106,9 @@
     (path "/37f110a6-be92-4150-951b-75b7edf8d927/3e701cac-1268-4f14-bb21-0b507e3d572d"
       (reference "#PWR?") (unit 1) (value "+3.3VA") (footprint "")
     )
+    (path "/72d1f671-0006-4da1-af39-839f555d1cf8/4770e16e-ef78-4eb8-8354-c1938370d499"
+      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+    )
     (path "/37f110a6-be92-4150-951b-75b7edf8d927/4b34f0b2-71f5-4ba1-809c-973e75924bfa"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
@@ -118,11 +121,17 @@
     (path "/66093701-71a9-4c01-8a6a-9f966f9bb426/5d91b4c1-b879-4328-a91f-755be60c531c"
       (reference "#PWR?") (unit 1) (value "+3.3V") (footprint "")
     )
+    (path "/72d1f671-0006-4da1-af39-839f555d1cf8/5ecc6131-3d9a-4de4-aa46-ae37dcf2891b"
+      (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
+    )
     (path "/37f110a6-be92-4150-951b-75b7edf8d927/67ce83ef-0e93-4c4d-998b-46f7cbbb313d"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
     (path "/37f110a6-be92-4150-951b-75b7edf8d927/9c8c3b6e-c939-45e0-b898-807ed4ae0979"
       (reference "#PWR?") (unit 1) (value "+3.3V") (footprint "")
+    )
+    (path "/72d1f671-0006-4da1-af39-839f555d1cf8/d1415200-b93f-4bae-af78-e086e7a84afc"
+      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
     (path "/37f110a6-be92-4150-951b-75b7edf8d927/d4f42330-06ec-48b7-b985-08f042233681"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
@@ -168,6 +177,15 @@
     )
     (path "/66093701-71a9-4c01-8a6a-9f966f9bb426/1e9b4040-47d8-42c8-ba63-a025e0b4da5f"
       (reference "J?") (unit 1) (value "Conn_02x07_Odd_Even") (footprint "")
+    )
+    (path "/72d1f671-0006-4da1-af39-839f555d1cf8/2271f647-3945-4ef2-a123-880544b84c8d"
+      (reference "J?") (unit 1) (value "POWER") (footprint "")
+    )
+    (path "/72d1f671-0006-4da1-af39-839f555d1cf8/510a2a64-f85a-482e-92e6-af8b38a9dc34"
+      (reference "J?") (unit 1) (value "OUTPUT") (footprint "")
+    )
+    (path "/72d1f671-0006-4da1-af39-839f555d1cf8/fcc1c877-755e-4269-a872-8264221903dc"
+      (reference "J?") (unit 1) (value "INPUT") (footprint "")
     )
     (path "/37f110a6-be92-4150-951b-75b7edf8d927/ff0f4203-5b43-4bcb-a047-667fa8a2096f"
       (reference "L?") (unit 1) (value "39n") (footprint "")
