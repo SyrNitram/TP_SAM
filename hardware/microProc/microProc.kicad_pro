@@ -414,6 +414,30 @@
     [
       "0e1523a8-9f3c-4767-b09b-1d681747c1f8",
       ""
+    ],
+    [
+      "37f110a6-be92-4150-951b-75b7edf8d927",
+      "STM32 Microcontroller"
+    ],
+    [
+      "ca8a95a2-b2dc-47aa-98bd-f5642d1ba2c4",
+      "Power supply"
+    ],
+    [
+      "a555fae6-4b52-49a7-95c9-bf52170037bd",
+      "DAC MCP4801"
+    ],
+    [
+      "72d1f671-0006-4da1-af39-839f555d1cf8",
+      "IO Connectors"
+    ],
+    [
+      "66093701-71a9-4c01-8a6a-9f966f9bb426",
+      "SWD Connector"
+    ],
+    [
+      "df724f40-e04a-40e8-aca3-4ccc63a52f27",
+      "Mounting holes"
     ]
   ],
   "text_variables": {}
