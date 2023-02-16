@@ -163,6 +163,9 @@
     (path "/66093701-71a9-4c01-8a6a-9f966f9bb426/4b3c3c57-2442-4eee-951a-05d260cc48b6"
       (reference "#PWR024") (unit 1) (value "GND") (footprint "")
     )
+    (path "/df724f40-e04a-40e8-aca3-4ccc63a52f27/71fe7bd1-43ae-4f93-986c-0848aaed3e5b"
+      (reference "#PWR025") (unit 1) (value "GND") (footprint "")
+    )
     (path "/37f110a6-be92-4150-951b-75b7edf8d927/ca83007f-4ae4-4d36-95cc-7a69f99f429d"
       (reference "C1") (unit 1) (value "4u7") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
@@ -198,6 +201,18 @@
     )
     (path "/ca8a95a2-b2dc-47aa-98bd-f5642d1ba2c4/0220e075-d97f-4076-83a4-7e5c155e204a"
       (reference "D2") (unit 1) (value "LED") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
+    )
+    (path "/df724f40-e04a-40e8-aca3-4ccc63a52f27/762ed2f3-d0ba-4698-abec-70876852634c"
+      (reference "H1") (unit 1) (value "MountingHole_Pad") (footprint "MountingHole:MountingHole_3.2mm_M3_Pad")
+    )
+    (path "/df724f40-e04a-40e8-aca3-4ccc63a52f27/9194f929-5f07-409c-9604-2c4ae2511219"
+      (reference "H2") (unit 1) (value "MountingHole_Pad") (footprint "MountingHole:MountingHole_3.2mm_M3_Pad")
+    )
+    (path "/df724f40-e04a-40e8-aca3-4ccc63a52f27/b5a90fea-13ef-4d3a-ba31-9df59eeb0c99"
+      (reference "H3") (unit 1) (value "MountingHole_Pad") (footprint "MountingHole:MountingHole_3.2mm_M3_Pad")
+    )
+    (path "/df724f40-e04a-40e8-aca3-4ccc63a52f27/8070a96c-dc95-4b5e-b9f3-e0660856520e"
+      (reference "H4") (unit 1) (value "MountingHole_Pad") (footprint "MountingHole:MountingHole_3.2mm_M3_Pad")
     )
     (path "/72d1f671-0006-4da1-af39-839f555d1cf8/2271f647-3945-4ef2-a123-880544b84c8d"
       (reference "J1") (unit 1) (value "POWER") (footprint "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical")
