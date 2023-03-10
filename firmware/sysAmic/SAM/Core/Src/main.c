@@ -23,6 +23,7 @@
 /* USER CODE BEGIN Includes */
 #include "Led.h"
 #include "TimeBase.h"
+#include "Serial.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -109,8 +110,10 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  LedPulse();
-	  LL_mDelay(10);
+	  char ch = SerialReceiveChar();
+	  if(ch != '\0')
+	  SerialTransmit(&ch, 1);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

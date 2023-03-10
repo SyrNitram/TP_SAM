@@ -244,3 +244,338 @@ arm-none-eabi-size   test.elf
    6172	     20	   1572	   7764	   1e54	test.elf
 Finished building: default.size.stdout
  
+17:04:57 **** Incremental Build of configuration Debug for project SAM ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/Led.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32L021xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DMSI_VALUE=2097000 -DHSI_VALUE=16000000 -DLSI_VALUE=37000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=0 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Led.d" -MT"Core/Src/Led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Led.o"
+arm-none-eabi-gcc "../Core/Src/Serial.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32L021xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DMSI_VALUE=2097000 -DHSI_VALUE=16000000 -DLSI_VALUE=37000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=0 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Serial.d" -MT"Core/Src/Serial.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Serial.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32L021xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DMSI_VALUE=2097000 -DHSI_VALUE=16000000 -DLSI_VALUE=37000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=0 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SAM.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\ST\ENSEA\sysAmic\SAM\STM32L021K4TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SAM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SAM.elf
+ 
+arm-none-eabi-size   SAM.elf 
+arm-none-eabi-objdump -h -S  SAM.elf  > "SAM.list"
+   text	   data	    bss	    dec	    hex	filename
+   8000	     16	   1568	   9584	   2570	SAM.elf
+Finished building: default.size.stdout
+ 
+Finished building: SAM.list
+ 
+17:05:00 **** Incremental Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-size   test.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6172	     20	   1572	   7764	   1e54	test.elf
+Finished building: default.size.stdout
+ 
+17:06:24 **** Incremental Build of configuration Debug for project SAM ****
+make -j4 all 
+arm-none-eabi-size   SAM.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8000	     16	   1568	   9584	   2570	SAM.elf
+Finished building: default.size.stdout
+ 
+17:06:51 **** Incremental Build of configuration Debug for project SAM ****
+make -j4 all 
+arm-none-eabi-size   SAM.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8000	     16	   1568	   9584	   2570	SAM.elf
+Finished building: default.size.stdout
+ 
+17:09:41 **** Incremental Build of configuration Debug for project SAM ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/TimeBase.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32L021xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DMSI_VALUE=2097000 -DHSI_VALUE=16000000 -DLSI_VALUE=37000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=0 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/TimeBase.d" -MT"Core/Src/TimeBase.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TimeBase.o"
+arm-none-eabi-gcc -o "SAM.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\ST\ENSEA\sysAmic\SAM\STM32L021K4TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SAM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SAM.elf
+ 
+arm-none-eabi-size   SAM.elf 
+arm-none-eabi-objdump -h -S  SAM.elf  > "SAM.list"
+   text	   data	    bss	    dec	    hex	filename
+   7996	     16	   1568	   9580	   256c	SAM.elf
+Finished building: default.size.stdout
+ 
+Finished building: SAM.list
+ 
+17:12:04 **** Incremental Build of configuration Debug for project SAM ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32L021xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DMSI_VALUE=2097000 -DHSI_VALUE=16000000 -DLSI_VALUE=37000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=0 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:112:14: warning: implicit declaration of function 'SerialReceiveChar' [-Wimplicit-function-declaration]
+  112 |    char ch = SerialReceiveChar();
+      |              ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:113:4: warning: implicit declaration of function 'SerialTransmit' [-Wimplicit-function-declaration]
+  113 |    SerialTransmit(&ch, 1);
+      |    ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "SAM.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\ST\ENSEA\sysAmic\SAM\STM32L021K4TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SAM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SAM.elf
+ 
+arm-none-eabi-size   SAM.elf 
+arm-none-eabi-objdump -h -S  SAM.elf  > "SAM.list"
+   text	   data	    bss	    dec	    hex	filename
+   8180	     16	   1568	   9764	   2624	SAM.elf
+Finished building: default.size.stdout
+ 
+Finished building: SAM.list
+ 
+17:12:06 **** Incremental Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-size   test.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6172	     20	   1572	   7764	   1e54	test.elf
+Finished building: default.size.stdout
+ 
+17:12:29 **** Incremental Build of configuration Debug for project SAM ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32L021xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DMSI_VALUE=2097000 -DHSI_VALUE=16000000 -DLSI_VALUE=37000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=0 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SAM.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\ST\ENSEA\sysAmic\SAM\STM32L021K4TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SAM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SAM.elf
+ 
+arm-none-eabi-size   SAM.elf 
+arm-none-eabi-objdump -h -S  SAM.elf  > "SAM.list"
+   text	   data	    bss	    dec	    hex	filename
+   8180	     16	   1568	   9764	   2624	SAM.elf
+Finished building: default.size.stdout
+ 
+Finished building: SAM.list
+ 
+17:12:31 **** Incremental Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-size   test.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6172	     20	   1572	   7764	   1e54	test.elf
+Finished building: default.size.stdout
+ 
+17:22:37 **** Incremental Build of configuration Debug for project SAM ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32L021xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DMSI_VALUE=2097000 -DHSI_VALUE=16000000 -DLSI_VALUE=37000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=0 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:114:19: warning: passing argument 1 of 'SerialTransmit' makes pointer from integer without a cast [-Wint-conversion]
+  114 |    SerialTransmit(ch, 1);
+      |                   ^~
+      |                   |
+      |                   char
+In file included from ../Core/Src/main.c:26:
+../Core/Inc/Serial.h:14:31: note: expected 'char *' but argument is of type 'char'
+   14 | uint8_t SerialTransmit(char * pData, uint16_t Size);
+      |                        ~~~~~~~^~~~~
+arm-none-eabi-gcc -o "SAM.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\ST\ENSEA\sysAmic\SAM\STM32L021K4TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SAM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SAM.elf
+ 
+arm-none-eabi-size   SAM.elf 
+arm-none-eabi-objdump -h -S  SAM.elf  > "SAM.list"
+   text	   data	    bss	    dec	    hex	filename
+   8180	     16	   1568	   9764	   2624	SAM.elf
+Finished building: default.size.stdout
+ 
+Finished building: SAM.list
+ 
+17:23:14 **** Incremental Build of configuration Debug for project SAM ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32L021xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DMSI_VALUE=2097000 -DHSI_VALUE=16000000 -DLSI_VALUE=37000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=0 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SAM.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\ST\ENSEA\sysAmic\SAM\STM32L021K4TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SAM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SAM.elf
+ 
+arm-none-eabi-size   SAM.elf 
+arm-none-eabi-objdump -h -S  SAM.elf  > "SAM.list"
+   text	   data	    bss	    dec	    hex	filename
+   8180	     16	   1568	   9764	   2624	SAM.elf
+Finished building: default.size.stdout
+ 
+Finished building: SAM.list
+ 
+17:24:48 **** Incremental Build of configuration Debug for project SAM ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/Serial.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32L021xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DMSI_VALUE=2097000 -DHSI_VALUE=16000000 -DLSI_VALUE=37000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=0 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Serial.d" -MT"Core/Src/Serial.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Serial.o"
+../Core/Src/Serial.c: In function 'SerialReceiveChar':
+../Core/Src/Serial.c:23:11: error: empty character constant
+   23 |  char c = '';
+      |           ^~
+../Core/Src/Serial.c:24:14: error: empty character constant
+   24 |  while (c != '')
+      |              ^~
+../Core/Src/Serial.c:27:2: error: unknown type name 'retrun'
+   27 |  retrun c;
+      |  ^~~~~~
+../Core/Src/Serial.c:27:9: error: conflicting types for 'c'
+   27 |  retrun c;
+      |         ^
+../Core/Src/Serial.c:23:7: note: previous definition of 'c' was here
+   23 |  char c = '';
+      |       ^
+../Core/Src/Serial.c:27:9: warning: unused variable 'c' [-Wunused-variable]
+   27 |  retrun c;
+      |         ^
+../Core/Src/Serial.c:28:1: warning: control reaches end of non-void function [-Wreturn-type]
+   28 | }
+      | ^
+make: *** [Core/Src/subdir.mk:40: Core/Src/Serial.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:25:33 **** Incremental Build of configuration Debug for project SAM ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/Serial.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32L021xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DMSI_VALUE=2097000 -DHSI_VALUE=16000000 -DLSI_VALUE=37000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=0 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Serial.d" -MT"Core/Src/Serial.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Serial.o"
+../Core/Src/Serial.c: In function 'SerialReceiveChar':
+../Core/Src/Serial.c:23:11: error: empty character constant
+   23 |  char c = '';
+      |           ^~
+../Core/Src/Serial.c:24:14: error: empty character constant
+   24 |  while (c != '')
+      |              ^~
+../Core/Src/Serial.c:27:2: error: unknown type name 'retrun'
+   27 |  retrun c;
+      |  ^~~~~~
+../Core/Src/Serial.c:27:9: error: conflicting types for 'c'
+   27 |  retrun c;
+      |         ^
+../Core/Src/Serial.c:23:7: note: previous definition of 'c' was here
+   23 |  char c = '';
+      |       ^
+../Core/Src/Serial.c:27:9: warning: unused variable 'c' [-Wunused-variable]
+   27 |  retrun c;
+      |         ^
+../Core/Src/Serial.c:28:1: warning: control reaches end of non-void function [-Wreturn-type]
+   28 | }
+      | ^
+make: *** [Core/Src/subdir.mk:40: Core/Src/Serial.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:25:53 **** Incremental Build of configuration Debug for project SAM ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/Serial.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32L021xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DMSI_VALUE=2097000 -DHSI_VALUE=16000000 -DLSI_VALUE=37000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=0 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Serial.d" -MT"Core/Src/Serial.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Serial.o"
+../Core/Src/Serial.c: In function 'SerialReceiveChar':
+../Core/Src/Serial.c:23:11: error: empty character constant
+   23 |  char c = '';
+      |           ^~
+../Core/Src/Serial.c:24:14: error: empty character constant
+   24 |  while (c != '')
+      |              ^~
+../Core/Src/Serial.c:27:2: error: unknown type name 'retrun'
+   27 |  retrun c;
+      |  ^~~~~~
+../Core/Src/Serial.c:27:9: error: conflicting types for 'c'
+   27 |  retrun c;
+      |         ^
+../Core/Src/Serial.c:23:7: note: previous definition of 'c' was here
+   23 |  char c = '';
+      |       ^
+../Core/Src/Serial.c:27:9: warning: unused variable 'c' [-Wunused-variable]
+   27 |  retrun c;
+      |         ^
+../Core/Src/Serial.c:28:1: warning: control reaches end of non-void function [-Wreturn-type]
+   28 | }
+      | ^
+make: *** [Core/Src/subdir.mk:40: Core/Src/Serial.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:26:05 **** Incremental Build of configuration Debug for project SAM ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/Serial.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32L021xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DMSI_VALUE=2097000 -DHSI_VALUE=16000000 -DLSI_VALUE=37000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=0 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Serial.d" -MT"Core/Src/Serial.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Serial.o"
+../Core/Src/Serial.c: In function 'SerialReceiveChar':
+../Core/Src/Serial.c:23:11: error: empty character constant
+   23 |  char c = '';
+      |           ^~
+../Core/Src/Serial.c:24:14: error: empty character constant
+   24 |  while (c != '')
+      |              ^~
+make: *** [Core/Src/subdir.mk:40: Core/Src/Serial.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:26:06 **** Incremental Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-size   test.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6172	     20	   1572	   7764	   1e54	test.elf
+Finished building: default.size.stdout
+ 
+17:26:37 **** Incremental Build of configuration Debug for project SAM ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/Serial.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32L021xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DMSI_VALUE=2097000 -DHSI_VALUE=16000000 -DLSI_VALUE=37000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=0 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Serial.d" -MT"Core/Src/Serial.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Serial.o"
+../Core/Src/Serial.c: In function 'SerialReceiveChar':
+../Core/Src/Serial.c:23:11: warning: multi-character character constant [-Wmultichar]
+   23 |  char c = '/0';
+      |           ^~~~
+../Core/Src/Serial.c:23:11: warning: unsigned conversion from 'int' to 'char' changes value from '12080' to '48' [-Woverflow]
+../Core/Src/Serial.c:24:14: warning: multi-character character constant [-Wmultichar]
+   24 |  while (c != '/0')
+      |              ^~~~
+arm-none-eabi-gcc -o "SAM.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\ST\ENSEA\sysAmic\SAM\STM32L021K4TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SAM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SAM.elf
+ 
+arm-none-eabi-size   SAM.elf 
+arm-none-eabi-objdump -h -S  SAM.elf  > "SAM.list"
+   text	   data	    bss	    dec	    hex	filename
+   8188	     16	   1568	   9772	   262c	SAM.elf
+Finished building: default.size.stdout
+ 
+Finished building: SAM.list
+ 
+17:27:16 **** Incremental Build of configuration Debug for project SAM ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/Serial.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32L021xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DMSI_VALUE=2097000 -DHSI_VALUE=16000000 -DLSI_VALUE=37000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=0 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Serial.d" -MT"Core/Src/Serial.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Serial.o"
+arm-none-eabi-gcc -o "SAM.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\ST\ENSEA\sysAmic\SAM\STM32L021K4TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SAM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SAM.elf
+ 
+arm-none-eabi-size   SAM.elf 
+arm-none-eabi-objdump -h -S  SAM.elf  > "SAM.list"
+   text	   data	    bss	    dec	    hex	filename
+   8180	     16	   1568	   9764	   2624	SAM.elf
+Finished building: default.size.stdout
+ 
+Finished building: SAM.list
+ 
+17:27:18 **** Incremental Build of configuration Debug for project test ****
+make -j4 all 
+arm-none-eabi-size   test.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6172	     20	   1572	   7764	   1e54	test.elf
+Finished building: default.size.stdout
+ 
+17:28:00 **** Incremental Build of configuration Debug for project SAM ****
+make -j4 all 
+arm-none-eabi-size   SAM.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8180	     16	   1568	   9764	   2624	SAM.elf
+Finished building: default.size.stdout
+ 
+17:30:36 **** Incremental Build of configuration Debug for project SAM ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/Serial.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32L021xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DMSI_VALUE=2097000 -DHSI_VALUE=16000000 -DLSI_VALUE=37000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=0 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Serial.d" -MT"Core/Src/Serial.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Serial.o"
+arm-none-eabi-gcc -o "SAM.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\ST\ENSEA\sysAmic\SAM\STM32L021K4TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SAM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SAM.elf
+ 
+arm-none-eabi-size   SAM.elf 
+arm-none-eabi-objdump -h -S  SAM.elf  > "SAM.list"
+   text	   data	    bss	    dec	    hex	filename
+   8180	     16	   1568	   9764	   2624	SAM.elf
+Finished building: default.size.stdout
+ 
+Finished building: SAM.list
+ 
+17:31:38 **** Incremental Build of configuration Debug for project SAM ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32L021xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DMSI_VALUE=2097000 -DHSI_VALUE=16000000 -DLSI_VALUE=37000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=0 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:114:13: warning: multi-character character constant [-Wmultichar]
+  114 |    if(ch != '/0')
+      |             ^~~~
+arm-none-eabi-gcc -o "SAM.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\ST\ENSEA\sysAmic\SAM\STM32L021K4TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SAM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SAM.elf
+ 
+arm-none-eabi-size   SAM.elf 
+arm-none-eabi-objdump -h -S  SAM.elf  > "SAM.list"
+   text	   data	    bss	    dec	    hex	filename
+   8180	     16	   1568	   9764	   2624	SAM.elf
+Finished building: default.size.stdout
+ 
+Finished building: SAM.list
+ 
+17:32:00 **** Incremental Build of configuration Debug for project SAM ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m0plus -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32l021k4tx.d" -MT"Core/Startup/startup_stm32l021k4tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Startup/startup_stm32l021k4tx.o" "../Core/Startup/startup_stm32l021k4tx.s"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32L021xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DMSI_VALUE=2097000 -DHSI_VALUE=16000000 -DLSI_VALUE=37000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=0 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SAM.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\ST\ENSEA\sysAmic\SAM\STM32L021K4TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SAM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SAM.elf
+ 
+arm-none-eabi-size   SAM.elf 
+arm-none-eabi-objdump -h -S  SAM.elf  > "SAM.list"
+   text	   data	    bss	    dec	    hex	filename
+   8188	     16	   1568	   9772	   262c	SAM.elf
+Finished building: default.size.stdout
+ 
+Finished building: SAM.list
+ 

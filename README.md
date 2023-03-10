@@ -42,3 +42,7 @@ Q4 : 	LQFP : Low Profile Quad Flat Package, est un type de boîtier de circuit i
 8. l'interruption va se declencher en boucle si le flag n'est pas remis à 0.
 
 9. Il faut remettre à 0 le flag.
+
+#UART
+
+5. La variable envoyer n'est pas le pointeur vers la variable mais la variable elle-même.

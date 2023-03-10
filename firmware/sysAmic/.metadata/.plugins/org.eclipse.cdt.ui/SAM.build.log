@@ -1,25 +1,18 @@
-16:49:13 **** Incremental Build of configuration Debug for project SAM ****
+17:32:00 **** Incremental Build of configuration Debug for project SAM ****
 make -j4 all 
-arm-none-eabi-gcc "../Core/Src/Serial.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32L021xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DMSI_VALUE=2097000 -DHSI_VALUE=16000000 -DLSI_VALUE=37000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=0 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Serial.d" -MT"Core/Src/Serial.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Serial.o"
-../Core/Src/Serial.c: In function 'SerialTransmit':
-../Core/Src/Serial.c:18:1: warning: control reaches end of non-void function [-Wreturn-type]
-   18 | }
-      | ^
-../Core/Src/Serial.c: In function 'SerialReceiveChar':
-../Core/Src/Serial.c:23:1: warning: control reaches end of non-void function [-Wreturn-type]
-   23 | }
-      | ^
+arm-none-eabi-gcc -mcpu=cortex-m0plus -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32l021k4tx.d" -MT"Core/Startup/startup_stm32l021k4tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Startup/startup_stm32l021k4tx.o" "../Core/Startup/startup_stm32l021k4tx.s"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32L021xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DMSI_VALUE=2097000 -DHSI_VALUE=16000000 -DLSI_VALUE=37000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=0 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "SAM.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\ST\ENSEA\sysAmic\SAM\STM32L021K4TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SAM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: SAM.elf
  
 arm-none-eabi-size   SAM.elf 
 arm-none-eabi-objdump -h -S  SAM.elf  > "SAM.list"
    text	   data	    bss	    dec	    hex	filename
-   8076	     16	   1568	   9660	   25bc	SAM.elf
+   8188	     16	   1568	   9772	   262c	SAM.elf
 Finished building: default.size.stdout
  
 Finished building: SAM.list
  
 
-16:49:15 Build Finished. 0 errors, 2 warnings. (took 1s.656ms)
+17:32:02 Build Finished. 0 errors, 0 warnings. (took 1s.703ms)
 
