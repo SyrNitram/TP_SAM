@@ -1,0 +1,17 @@
+15:02:55 **** Incremental Build of configuration Debug for project SAM ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/Led.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32L021xx -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Led.d" -MT"Core/Src/Led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Led.o"
+arm-none-eabi-gcc -o "SAM.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\ST\ENSEA\sysAmic\SAM\STM32L021K4TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SAM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SAM.elf
+ 
+arm-none-eabi-size   SAM.elf 
+arm-none-eabi-objdump -h -S  SAM.elf  > "SAM.list"
+   text	   data	    bss	    dec	    hex	filename
+  10380	     24	   1632	  12036	   2f04	SAM.elf
+Finished building: default.size.stdout
+ 
+Finished building: SAM.list
+ 
+
+15:02:57 Build Finished. 0 errors, 0 warnings. (took 1s.984ms)
+
