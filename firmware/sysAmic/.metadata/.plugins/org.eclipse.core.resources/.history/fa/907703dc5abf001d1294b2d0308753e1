@@ -1,0 +1,22 @@
+/*
+ * Serial.c
+ *
+ *  Created on: Mar 10, 2023
+ *      Author: marti
+ */
+
+
+#include "Serial.h"
+
+
+// Cette fonction pourra être utilisée par le Shell v0.4
+uint8_t SerialTransmit(char * pData, uint16_t Size){
+	for{uint_16_t i = 0; i< Size-1;i++)
+		LL_USART_TransmitData8(USART2, pdata[i]);
+
+}
+// Dans cet exemple, on fait du polling, et c'est pas très grave
+char SerialReceiveChar(void){
+
+
+}

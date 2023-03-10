@@ -1,0 +1,3 @@
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_usart.h:3632:22:LL_USART_TransmitData8	16	static
+../Core/Src/Serial.c:14:9:SerialTransmit	32	static
+../Core/Src/Serial.c:20:6:SerialReceiveChar	8	static

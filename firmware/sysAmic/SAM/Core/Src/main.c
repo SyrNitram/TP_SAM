@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "Led.h"
+#include "TimeBase.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -39,8 +40,6 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-
-TIM_HandleTypeDef htim21;
 
 /* USER CODE BEGIN PV */
 
@@ -76,7 +75,11 @@ int main(void)
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+  LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_SYSCFG);
+  LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_PWR);
+
+  /* SysTick_IRQn interrupt configuration */
+  NVIC_SetPriority(SysTick_IRQn, 3);
 
   /* USER CODE BEGIN Init */
 
@@ -99,17 +102,13 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   LedStart();
-  uint8_t i = 0;
+  TimeBaseStartIT();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  /*
-	  LedSetValue(i);
-	  if(++i > 250) i = 0;
-	  */
 	  LedPulse();
 	  LL_mDelay(10);
     /* USER CODE END WHILE */
@@ -148,13 +147,10 @@ void SystemClock_Config(void)
   {
 
   }
-  LL_SetSystemCoreClock(16000000);
 
-   /* Update the time base */
-  if (HAL_InitTick (TICK_INT_PRIORITY) != HAL_OK)
-  {
-    Error_Handler();
-  }
+  LL_Init1msTick(16000000);
+
+  LL_SetSystemCoreClock(16000000);
   LL_RCC_SetUSARTClockSource(LL_RCC_USART2_CLKSOURCE_PCLK1);
 }
 
@@ -369,33 +365,27 @@ static void MX_TIM21_Init(void)
 
   /* USER CODE END TIM21_Init 0 */
 
-  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
-  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  LL_TIM_InitTypeDef TIM_InitStruct = {0};
+
+  /* Peripheral clock enable */
+  LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_TIM21);
+
+  /* TIM21 interrupt Init */
+  NVIC_SetPriority(TIM21_IRQn, 0);
+  NVIC_EnableIRQ(TIM21_IRQn);
 
   /* USER CODE BEGIN TIM21_Init 1 */
 
   /* USER CODE END TIM21_Init 1 */
-  htim21.Instance = TIM21;
-  htim21.Init.Prescaler = 16000;
-  htim21.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim21.Init.Period = 1000;
-  htim21.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-  htim21.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-  if (HAL_TIM_Base_Init(&htim21) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
-  if (HAL_TIM_ConfigClockSource(&htim21, &sClockSourceConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
-  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-  if (HAL_TIMEx_MasterConfigSynchronization(&htim21, &sMasterConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
+  TIM_InitStruct.Prescaler = 16;
+  TIM_InitStruct.CounterMode = LL_TIM_COUNTERMODE_UP;
+  TIM_InitStruct.Autoreload = 1000;
+  TIM_InitStruct.ClockDivision = LL_TIM_CLOCKDIVISION_DIV1;
+  LL_TIM_Init(TIM21, &TIM_InitStruct);
+  LL_TIM_DisableARRPreload(TIM21);
+  LL_TIM_SetClockSource(TIM21, LL_TIM_CLOCKSOURCE_INTERNAL);
+  LL_TIM_SetTriggerOutput(TIM21, LL_TIM_TRGO_RESET);
+  LL_TIM_DisableMasterSlaveMode(TIM21);
   /* USER CODE BEGIN TIM21_Init 2 */
 
   /* USER CODE END TIM21_Init 2 */

@@ -5,8 +5,9 @@
  *      Author: marti
  */
 #include "TimeBase.h"
-/*
+
 void TimeBaseStartIT(void){
-	HAL_TIM_Base_MspInit(&htim21);
+	LL_TIM_EnableCounter(TIM21);
+	LL_TIM_EnableUpdateEvent(TIM21);
 }
-*/
+
